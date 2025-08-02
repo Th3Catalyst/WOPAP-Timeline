@@ -28,8 +28,15 @@ li {
   position:relative;
   padding-top:0px;
 }
-li h2 {display:inline-block;}
-li h1 {display:inline-block; color:#BB0011;}
+li h2 {
+  display:inline-block;
+  padding-top:0; margin-top:0;
+}
+li h1 {
+  display:inline-block; 
+  color:#BB0011;
+  padding-top:0; margin-top:0;
+}
 li div h3 { 
   padding-top:0; margin-top:0;
   padding-bottom:2px; margin-bottom:2px;
