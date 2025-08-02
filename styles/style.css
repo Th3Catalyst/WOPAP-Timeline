@@ -1,0 +1,6 @@
+ul {
+  border-left: 10px solid red;
+  
+}
+ul:nth-child(even) { border: 5px solid blue;}
+ul:nth-child(odd) { border: 5px solid yellow;}
