@@ -4,7 +4,7 @@ ul {
   padding-left:15px;
   border-left:10px solid #BB0011;
 }
-li div::before {
+li div::before, li h2::before,li h1::before{
   content:" ";
   display:inline-block;
   border:5px solid #BB0011;
@@ -20,7 +20,8 @@ li div {display:inline-block;}
 li span {
   display:inline-block;
   position:absolute;
-  left:-80px;
+  left:-90px;
+  text-align:right;
   width: 50px;
 }
 li {
