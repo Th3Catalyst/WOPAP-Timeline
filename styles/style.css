@@ -14,8 +14,8 @@ li div::before {
   overflow:hidden;
   border-radius:50%;
   position: absolute;
-  left:-30px;
-  top:0;
+  left:-32.5px;
+  top:5px;
 }
 li div {display:inline-block;}
 li span {
