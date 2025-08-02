@@ -4,6 +4,7 @@ ul {
   margin-left:70px;
   margin-top:0;
   padding-left:15px;
+  padding-top:40px;
   border-left:10px solid #BB0011;
 }
 li div::before, li h2::before,li h1::before{
@@ -18,7 +19,8 @@ li div::before, li h2::before,li h1::before{
   position: absolute;
   left:-32.5px;
 }
-li h2::before, li h1::before {top: 0.25em;}
+li h1::before {top: 0.25em;}
+li h2::before {top: 0.225em;}
 li h3 { display:none; position:absolute;}
 li div {display:inline-block;}
 li div p {
