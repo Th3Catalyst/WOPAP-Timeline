@@ -21,6 +21,7 @@ li div {display:inline-block;}
 li span {
   display:inline-block;
   position:absolute;
+  top:3px;
   left:-80px;
   width: 50px;
 }
@@ -28,4 +29,6 @@ li {
   position:relative;
   padding-top:0px;
 }
-li div h2 { padding-top:0; margin-top:0;}
+li h2 {display:inline-block;}
+li h1 {display:inline-block; color:#BB0011;}
+li div h3 { padding-top:0; margin-top:0;}
