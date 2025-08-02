@@ -15,13 +15,11 @@ li div::before {
   border-radius:50%;
   position: absolute;
   left:-32.5px;
-  top:5px;
 }
 li div {display:inline-block;}
 li span {
   display:inline-block;
   position:absolute;
-  top:3px;
   left:-80px;
   width: 50px;
 }
@@ -31,4 +29,7 @@ li {
 }
 li h2 {display:inline-block;}
 li h1 {display:inline-block; color:#BB0011;}
-li div h3 { padding-top:0; margin-top:0;}
+li div h3 { 
+  padding-top:0; margin-top:0;
+  padding-bottom:2px; margin-bottom:2px;
+}
