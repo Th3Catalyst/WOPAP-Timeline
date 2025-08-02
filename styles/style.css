@@ -6,15 +6,21 @@ ul {
 }
 li div::before {
   content:"•";
-  width:20px;
+  display:inline-block;
+  border:5px solid red;
+  width:40px;
+  height:40px;
   border-radius:50%;
   position: relative;
-  right:10px;
+  right:20px;
 }
+li div {display:inline-block;}
 li span {
-  width:30px;
+  display:inline-block;
   position:relative;
-  right:50px;
+  right:60px;
+  height: 0;
+  width: 0;
+  overflow: visible;
 }
-li:nth-child(even) div::before { border: 5px solid blue;}
-li:nth-child(odd) div::before { border: 5px solid yellow;}
+
