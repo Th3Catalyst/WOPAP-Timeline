@@ -2,15 +2,15 @@ ul {
   list-style: none;
   margin-left:70px;
   padding-left:10px;
-  border-left:20px solid red;
+  border-left:10px solid red;
 }
 li div::before {
   content:" ";
   display:inline-block;
   border:5px solid red;
   background-color:red;
-  width:20px;
-  height:20px;
+  width:15px;
+  height:15px;
   overflow:hidden;
   border-radius:50%;
   position: absolute;
@@ -28,3 +28,4 @@ li {
   position:relative;
   padding-top:0px;
 }
+li div h2 { padding-top:0; margin-top:0;}
