@@ -16,6 +16,7 @@ li div::before, li h2::before,li h1::before{
   position: absolute;
   left:-32.5px;
 }
+li h2::before, li h1::before {top: 0.5em;}
 li h3 { display:none; position:absolute;}
 li div {display:inline-block;}
 li div p {
