@@ -16,13 +16,14 @@ li div::before, li h2::before,li h1::before{
   position: absolute;
   left:-32.5px;
 }
+li h3 { display:none;}
 li div {display:inline-block;}
 li span {
   display:inline-block;
   position:absolute;
   left:-90px;
   text-align:right;
-  width: 50px;
+  width: 70px;
 }
 li {
   position:relative;
