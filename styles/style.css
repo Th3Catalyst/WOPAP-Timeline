@@ -18,7 +18,11 @@ li div::before, li h2::before,li h1::before{
 }
 li h3 { display:none; position:absolute;}
 li div {display:inline-block;}
-li div p {display:inline-block; margin-top:0;}
+li div p {
+  display:inline-block; 
+  margin-top:0;
+  height: max(fit-content,3em);
+}
 li span {
   display:inline-block;
   position:absolute;
