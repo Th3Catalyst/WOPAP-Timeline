@@ -2,10 +2,10 @@ ul {
   list-style: none;
   margin-left:70px;
   padding-left:10px;
-  border-left:10px solid red;
+  border-left:20px solid red;
 }
 li div::before {
-  content:"•";
+  content:" ";
   display:inline-block;
   border:5px solid red;
   background-color:red;
@@ -14,14 +14,17 @@ li div::before {
   overflow:hidden;
   border-radius:50%;
   position: absolute;
-  left:-20px;
+  left:-40px;
   top:20px;
 }
 li div {display:inline-block;}
 li span {
   display:inline-block;
   position:absolute;
-  left:-60px;
-  width: 30px;
+  left:-80px;
+  width: 50px;
 }
-li {position:relative;}
+li {
+  position:relative;
+  padding-top:0px;
+}
