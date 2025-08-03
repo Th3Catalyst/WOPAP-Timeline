@@ -84,6 +84,9 @@ li div h3 {
 .active::before {
   content: "▼";
 }
+li.active::after {
+  display:none;
+}
 .content {
   display:none;
 }
