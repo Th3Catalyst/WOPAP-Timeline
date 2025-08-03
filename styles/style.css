@@ -74,7 +74,7 @@ li div h3 {
 .active::before {
   content: "▼";
 }
-.collapsible-dashed {
+.content::after {
   border-left:10px dashed #BB0011;
   height:30px;
   display:none;
