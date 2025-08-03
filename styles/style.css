@@ -74,7 +74,7 @@ li div h3 {
   padding-bottom:2px; margin-bottom:2px;
 }
 .collapsible::before {
-  content:"▼";
+  content:"►";
   display:inline-block;
   overflow:hidden;
   position: absolute;
@@ -82,9 +82,13 @@ li div h3 {
   top:10px;
 }
 .active::before {
-  content: "►";
+  content: "▼";
+}
+.content {
+  display:none;
 }
 .content::after {
+  content:" ";
   border-left:10px dashed #BB0011;
   height:30px;
   display:block;
