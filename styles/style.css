@@ -31,7 +31,7 @@ li div::before, li h2::before,li h1::before{
   left:-32.5px;
 }
 li h1::before {
-  left: calc(-32.5px - 0.25em);
+  left: calc(-32.5px + 0.25em);
   width: calc(15px + 0.25em);
   height: calc(15px + 0.25em);
 }
