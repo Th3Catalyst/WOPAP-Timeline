@@ -63,3 +63,17 @@ li div h3 {
   padding-top:0; margin-top:0;
   padding-bottom:2px; margin-bottom:2px;
 }
+.collapsible::before {
+  content:"›";
+  display:inline-block;
+  border:5px solid #BB0011;
+  background-color:#BB0011;
+  width:15px;
+  height:15px;
+  overflow:hidden;
+  border-radius:50%;
+  position: absolute;
+  left:-32.5px;
+}
+.active::before {
+  content: "\
