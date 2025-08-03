@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap');
+body {
+  font-family: sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
 body {margin:0 0 0 auto;}
 a { 
   text-decoration:none;
@@ -66,7 +79,7 @@ li h2 {
 }
 li h1 {
   display:inline-block; 
-  color:#BB0011;
+  color:#990011;
   padding-top:0; margin-top:0;
 }
 li div h3 { 
