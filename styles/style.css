@@ -64,16 +64,18 @@ li div h3 {
   padding-bottom:2px; margin-bottom:2px;
 }
 .collapsible::before {
-  content:"›";
+  content:"▲";
   display:inline-block;
-  border:5px solid #BB0011;
-  background-color:#BB0011;
-  width:15px;
-  height:15px;
   overflow:hidden;
-  border-radius:50%;
   position: absolute;
-  left:-32.5px;
+  left:-110px;
+  top:20px;
 }
 .active::before {
-  content: "\
+  content: "▼";
+}
+.collapsible-dashed {
+  border-left:10px dashed #BB0011;
+  height:30px;
+  display:none;
+}
