@@ -85,7 +85,7 @@ li div h3 {
   content: "▼";
 }
 li.active::after {
-  z-index:-1;
+  display:none!important;
 }
 .content {
   display:none;
