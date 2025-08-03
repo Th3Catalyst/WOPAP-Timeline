@@ -30,7 +30,11 @@ li div::before, li h2::before,li h1::before{
   position: absolute;
   left:-32.5px;
 }
-li h1::before {top: 0.25em;}
+li h1::before {
+  left: calc(-32.5px - 0.25em);
+  width: calc(15px + 0.25em);
+  height: calc(15px + 0.25em);
+}
 li h2::before {top: 0.225em;}
 li h3 { display:none; position:absolute;}
 li div {display:inline-block;}
