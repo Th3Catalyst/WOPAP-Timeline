@@ -74,7 +74,7 @@ li div h3 {
   padding-bottom:2px; margin-bottom:2px;
 }
 .collapsible::before {
-  content:"▲";
+  content:"►";
   display:inline-block;
   overflow:hidden;
   position: absolute;
