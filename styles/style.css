@@ -92,4 +92,7 @@ li.collapsible::after {
   border-left:10px dashed #00F;
   height:30px;
   display:block;
+  position:relative;
+  left:-30px;
+  top:-10px;
 }
