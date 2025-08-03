@@ -89,10 +89,10 @@ li div h3 {
 }
 li.collapsible::after {
   content:" ";
-  border-left:10px dashed #00F;
+  border-left:10px dashed #FFF;
   height:30px;
   display:block;
   position:relative;
-  left:-30px;
+  left:-25px;
   top:-10px;
 }
