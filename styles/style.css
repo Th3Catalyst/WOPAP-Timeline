@@ -88,6 +88,7 @@ li div h3 {
 }
 .collapsible::before {
   content:"►";
+  font-family: "Times New Roman";
   display:inline-block;
   overflow:hidden;
   position: absolute;
