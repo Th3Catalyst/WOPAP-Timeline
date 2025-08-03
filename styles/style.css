@@ -87,7 +87,7 @@ li div h3 {
 .content {
   display:none;
 }
-.content::after {
+h1.collapsible::after {
   content:" ";
   border-left:10px dashed #BB0011;
   height:30px;
