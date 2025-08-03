@@ -87,9 +87,9 @@ li div h3 {
 .content {
   display:none;
 }
-h1.collapsible::after {
+li.collapsible::after {
   content:" ";
-  border-left:10px dashed #FFF;
+  border-left:10px dashed #00F;
   height:30px;
   display:block;
 }
