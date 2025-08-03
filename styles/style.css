@@ -1,4 +1,13 @@
 body {margin:0 0 0 auto;}
+a { 
+  text-decoration:none;
+  font-weight:bold;
+  color:#BB0011;
+}
+a:hover {
+  text-decoration:underline;
+  color:#DD2233;
+}
 ul {
   list-style: none;
   margin-left:80px;
