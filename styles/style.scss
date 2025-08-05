@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap');
+$mainRed: #BB0011;
+@mixin bulletpoint($size) {
+    content:" ";
+    display:inline-block;
+    border:5px solid $mainRed;
+    background-color:$mainRed;
+    width:$size;
+    height:$size;
+    overflow:hidden;
+    border-radius:50%;
+    position: absolute;
+}
+body {
+  font-family: sans-serif;
+  margin:0 0 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+a { 
+  text-decoration:none;
+  color:$mainRed;
+  &:hover {
+    text-decoration:underline;
+  }
+}
+ul {
+  list-style: none;
+  margin-left:80px;
+  padding-left:15px;
+  margin-top:0;
+  padding-top:40px;
+  margin-bottom:0;
+  padding-bottom:40px;
+  min-height:100vw;
+  border-left:10px solid $mainRed;
+}
+li {
+  position:relative;
+  padding-top:0px;
+  span {
+    display:inline-block;
+    position:absolute;
+    left:-110px;
+    text-align:right;
+    width: 70px;
+  }
+  h2 {
+    display:inline-block;
+    padding-top:0; margin-top:0;
+    &::before {
+        left: calc(-32.5px - 0.0625em);
+        top: 0.15em;
+        @include bulletpoint(calc(15px + 0.125em));
+    }
+  }
+  h1 {
+    display:inline-block; 
+    color:#990011;
+    padding-top:0; margin-top:0;
+    &::before {
+        left: calc(-32.5px - 0.125em);
+        top: 0.125em;
+        @include bulletpoint(calc(15px + 0.25em));
+    }
+  }
+  h3 {
+    display:none; position:absolute;
+  }
+  &.collapsible::before {
+    content:"►";
+    font-family: "Times New Roman";
+    display:inline-block;
+    overflow:hidden;
+    position: absolute;
+    left:-60px;
+    top:10px;
+  }
+  &.collapsible:hover {
+    cursor:pointer;
+    width: fit-content;
+  }
+  div {
+    &::before {
+        @include bulletpoint(15px);
+        left:-32.5px;
+    }
+    display:inline-block;
+    h3 { 
+        padding-top:0; margin-top:0;
+        padding-bottom:2px; margin-bottom:2px;
+    }
+    p {
+        display:inline-block; 
+        margin-top:0;
+        min-height:3em;
+    }
+  }
+  &.active::before {
+    content: "▼";
+  }
+}
+
+.content {
+  display:none;
+}
