@@ -1,4 +1,4 @@
-const coll = document.getElementsByClassName("collapsible");
+let coll = document.getElementsByClassName("collapsible");
 let i;
 
 for (i = 0; i < coll.length; i++) {
