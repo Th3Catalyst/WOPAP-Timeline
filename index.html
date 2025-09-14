@@ -10,7 +10,7 @@
     <body>
         <input type="text" placeholder="Search.." id="search" onkeyup="wordSearch()">
         <div id="tagSearchContainer">
-            <input type="text" placeholder="Search.." id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true)">
+            <input type="text" placeholder="Search.." id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true); tagSearch();">
             <ul id="tagList">
                 <li><button onclick="addTag('acroamatic abatement'); tagSearch();">acroamatic abatement</button></li>
                 <li><button onclick="addTag('allan mcinnis'); tagSearch();">allan mcinnis</button></li>
@@ -23,7 +23,7 @@
                 <li><button onclick="addTag('giftschreiber'); tagSearch();">giftschreiber</button></li>
                 <li><button onclick="addTag('harry blank'); tagSearch();">harry blank</button></li>
                 <li><button onclick="addTag('ilse reynders'); tagSearch();">ilse reynders</button></li>
-                <li><button onclick="addTag('ipmerwash crisis'); tagSearch();">ipperwash crisis</button></li>
+                <li><button onclick="addTag('ipperwash crisis'); tagSearch();">ipperwash crisis</button></li>
                 <li><button onclick="addTag('lillian lillihammer'); tagSearch();">lillian lillihammer</button></li>
                 <li><button onclick="addTag('lys reynders'); tagSearch();">lys reynders</button></li>
                 <li><button onclick="addTag('memetics'); tagSearch();">memetics</button></li>

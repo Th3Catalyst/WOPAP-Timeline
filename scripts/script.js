@@ -19,11 +19,14 @@ function addTag(tag) {
   let input = document.getElementById("searchTag");
   if (input.value) {
     temp = input.value.split(',').map(tag => tag.trim().toLowerCase());
-    if (!temp.includes(tag.toLowerCase())) {
-      input.value = temp.toString() + ', ' + tag;
+    temp.pop();
+    if (!temp.includes(tag.toLowerCase()) && temp.length > 0) {
+      input.value = temp.join(', ') + ', ' + tag + ', ';
+    } else if (!temp.includes(tag.toLowerCase())) {
+      input.value = tag + ', ';
     }
   } else {
-    input.value = tag;
+    input.value = tag + ', ';
   }
 }
 
