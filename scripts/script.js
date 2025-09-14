@@ -12,3 +12,79 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+const events = document.querySelectorAll('[data-tags]');
+
+function addTag(tag) {
+  let input = document.getElementById("searchTag");
+  if (input.value) {
+    temp = input.value.split(',').map(tag => tag.trim().toLowerCase());
+    if (!temp.includes(tag.toLowerCase())) {
+      input.value = temp.toString() + ', ' + tag;
+    }
+  } else {
+    input.value = tag;
+  }
+}
+
+function tagSearch() {
+  input = document.getElementById("searchTag");
+  filter = input.value;
+  
+  for (i = 0; i < events.length; i++) {
+    events[i].parentNode.style.display = "none";
+    events[i].parentNode.previousElementSibling.classList.remove("active");
+  }
+  let enabledTags = filter.split(',').map(tag => tag.trim().toLowerCase());
+  console.log(enabledTags);
+  for (i = 0; i < events.length; i++) {
+    let tags = events[i].getAttribute("data-tags");
+    if (tags) {
+      let tagList = tags.split(',').map(tag => tag.trim().toLowerCase());
+      if (tagList.some(element => enabledTags.includes(element))) {
+        events[i].style.display = "list-item";
+        events[i].parentNode.style.display = "block";
+        events[i].parentNode.previousElementSibling.classList.add("active");
+      } else {
+        events[i].style.display = "none";
+      }
+    } else {
+      events[i].style.display = "none";
+    }
+  }
+}
+
+
+function wordSearch(elements = events, menu = false) {
+  
+  if (!menu) {
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    for (i = 0; i < elements.length; i++) {
+      elements[i].parentNode.style.display = "none";
+      elements[i].parentNode.previousElementSibling.classList.remove("active");
+    }
+  } else {
+    
+    input = document.getElementById("searchTag");
+    filter = input.value.toUpperCase().split(',');
+    filter = filter[filter.length - 1].trim();
+    console.log(filter);
+  }
+  for (i = 0; i < elements.length; i++) {
+    if (!menu) {
+      txtValue = elements[i].querySelector('div').querySelector('p').textContent || elements[i].querySelector('div').querySelector('p').innerText;
+    } else {
+      txtValue = elements[i].querySelector('button').textContent || elements[i].querySelector('button').innerText;
+    }
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      elements[i].style.display = "list-item";
+      if (!menu) {
+        elements[i].parentNode.style.display = "block";
+        elements[i].parentNode.previousElementSibling.classList.add("active");
+      }
+    } else {
+      elements[i].style.display = "none";
+    }
+  }
+}
