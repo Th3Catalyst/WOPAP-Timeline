@@ -107,8 +107,10 @@ document.getElementById("searchTag").addEventListener("focus", (e) => {
   input = document.getElementById("searchTag")
   setTimeout(function(){ input.selectionStart = input.selectionEnd = 10000; }, 0);
 document.getElementById("tagList").style.opacity = "1";
+document.getElementById("tagList").style.pointerEvents = "auto";
 });
 
 document.getElementById("searchTag").addEventListener("blur", (e) => {
-  document.getElementById("tagList").style.opacity = "0";
+document.getElementById("tagList").style.opacity = "0";
+document.getElementById("tagList").style.pointerEvents = "none";
 });
