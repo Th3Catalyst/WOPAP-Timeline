@@ -24,6 +24,9 @@ function addTag(tag) {
       input.value = temp.join(', ') + ', ' + tag + ', ';
     } else if (!temp.includes(tag.toLowerCase())) {
       input.value = tag + ', ';
+    } else {
+      temp.splice(temp.indexOf(tag.toLowerCase()),1);
+      input.value = temp.join(', ') + ', '
     }
   } else {
     input.value = tag + ', ';
