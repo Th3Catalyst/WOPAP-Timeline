@@ -7,10 +7,12 @@
         <link href="/styles/style.css" rel="stylesheet" type="text/css" />
         <script src="scripts/script.js" defer></script>
     </head>
-    <body>
-        <input type="text" placeholder="Search.." id="search" onkeyup="wordSearch()">
+    <body>]
+        <button onclick="openMenu()"> </button>
+        <div id="#searchContainer">
+        <input type="text" placeholder="Search..." id="search" onkeyup="wordSearch()">
         <div id="tagSearchContainer">
-            <input type="text" placeholder="Search.." id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true); tagSearch();">
+            <input type="text" placeholder="Tag Search" id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true); tagSearch();">
             <ul id="tagList">
                 <li><button onclick="addTag('acroamatic abatement'); tagSearch();">acroamatic abatement</button></li>
                 <li><button onclick="addTag('allan mcinnis'); tagSearch();">allan mcinnis</button></li>
