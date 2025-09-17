@@ -98,7 +98,7 @@ document.getElementById("searchMenuB").addEventListener("click", (e) => {
 });
 
 document.getElementById("searchTag").addEventListener("focus", (e) => {
-  document.getElementById("tagList").style.opacity = "1";
+ setTimeout(function(){ this.selectionStart = this.selectionEnd = 10000; }, 0); document.getElementById("tagList").style.opacity = "1";
 });
 
 document.getElementById("searchTag").addEventListener("blur", (e) => {
