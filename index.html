@@ -7,9 +7,9 @@
         <link href="/styles/style.css" rel="stylesheet" type="text/css" />
         <script src="scripts/script.js" defer></script>
     </head>
-    <body>]
-        <button onclick="openMenu()"> </button>
-        <div id="#searchContainer">
+    <body>
+        <button id="searchMenuB" onclick="openMenu()"> </button>
+        <div id="searchContainer">
         <input type="text" placeholder="Search..." id="search" onkeyup="wordSearch()">
         <div id="tagSearchContainer">
             <input type="text" placeholder="Tag Search" id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true); tagSearch();">
@@ -59,6 +59,7 @@
                 <li><button onclick="addTag('vivian scout'); tagSearch();">vivian scout</button></li>
                 <li><button onclick="addTag('wynn rydderech'); tagSearch();">wynn rydderech</button></li>
             </ul>
+        </div>
         </div>
         <ul>
         <li class="collapsible"><h1>1200s</h1></li>

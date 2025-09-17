@@ -91,3 +91,16 @@ function wordSearch(elements = events, menu = false) {
     }
   }
 }
+
+document.getElementById("searchMenuB").addEventListener("click", (e) => {
+  document.getElementById("searchContainer").classList.toggle("show");
+  console.log("clicked");
+});
+
+document.getElementById("searchTag").addEventListener("focus", (e) => {
+  document.getElementById("tagList").style.opacity = "1";
+});
+
+document.getElementById("searchTag").addEventListener("blur", (e) => {
+  document.getElementById("tagList").style.opacity = "0";
+});
