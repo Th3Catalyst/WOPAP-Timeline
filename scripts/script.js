@@ -99,10 +99,7 @@ document.getElementById("searchMenuB").addEventListener("click", (e) => {
 
 document.getElementById("searchTag").addEventListener("focus", (e) => {
   input = document.getElementById("searchTag")
-  val = input.value;
-  input.value = '';
-  input.value = val;
-  console.log(val);
+  setTimeout(function(){ input.selectionStart = input.selectionEnd = 10000; }, 0);
 document.getElementById("tagList").style.opacity = "1";
 });
 
