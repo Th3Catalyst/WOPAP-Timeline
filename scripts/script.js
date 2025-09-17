@@ -110,5 +110,5 @@ document.getElementById("tagList").style.display = "block";
 });
 
 document.getElementById("searchTag").addEventListener("blur", (e) => {
-document.getElementById("tagList").style.display = "none";
+setTimeout(function(){document.getElementById("tagList").style.display = "none";}, 0);
 });
