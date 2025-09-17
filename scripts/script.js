@@ -26,7 +26,10 @@ function addTag(tag) {
       input.value = tag + ', ';
     } else {
       temp.splice(temp.indexOf(tag.toLowerCase()),1);
-      input.value = temp.join(', ') + ', '
+      input.value = temp.join(', ');
+      if (temp.length() > 0) {
+        input.value += ', ';
+      }
     }
   } else {
     input.value = tag + ', ';
