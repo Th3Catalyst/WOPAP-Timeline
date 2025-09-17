@@ -98,9 +98,10 @@ document.getElementById("searchMenuB").addEventListener("click", (e) => {
 });
 
 document.getElementById("searchTag").addEventListener("focus", (e) => {
-  val = this.value;
-  this.value = '';
-  this.value = val;
+  input = document.getElementById("searchTag")
+  val = input.value;
+  input.value = '';
+  input.value = val;
   console.log(val);
 document.getElementById("tagList").style.opacity = "1";
 });
