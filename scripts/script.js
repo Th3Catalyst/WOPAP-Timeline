@@ -96,6 +96,13 @@ function wordSearch(elements = events, menu = false) {
       elements[i].style.display = "none";
     }
   }
+  if (document.getElementById("search").value == "" && !menu) {
+    for (i = 0; i < events.length; i++) {
+      events[i].parentNode.style.display = "none";
+      events[i].parentNode.previousElementSibling.classList.remove("active");
+      events[i].style.display = "list-item";
+    }
+  }
 }
 
 document.getElementById("searchMenuB").addEventListener("click", (e) => {
@@ -111,5 +118,13 @@ document.getElementById("tagList").style.display = "block";
 });
 
 document.getElementById("searchTag").addEventListener("blur", (e) => {
-setTimeout(function(){document.getElementById("tagList").style.display = "none";}, 0);
+  document.addEventListener("mouseup", (e) => {
+    setTimeout(function(){document.getElementById("tagList").style.display = "none";
+    if (document.getElementById("searchTag").value == "") {
+      for (i = 0; i < events.length; i++) {
+        events[i].style.display = "list-item";
+      }
+    }}, 20);
+  }, { once: true });
+  
 });
