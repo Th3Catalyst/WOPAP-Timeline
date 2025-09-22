@@ -12,7 +12,7 @@
         <div id="searchContainer">
         <input type="text" placeholder="Search..." id="search" onkeyup="wordSearch()">
         <div id="tagSearchContainer">
-            <input type="text" placeholder="Tag Search" id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true); tagSearch();">
+            <textarea placeholder="Tag Search" id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true); tagSearch();"></textarea>
             <ul id="tagList">
                 <li><button onclick="addTag('acroamatic abatement'); tagSearch();">acroamatic abatement</button></li>
                 <li><button onclick="addTag('allan mcinnis'); tagSearch();">allan mcinnis</button></li>
