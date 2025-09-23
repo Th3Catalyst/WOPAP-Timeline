@@ -127,7 +127,7 @@ li {
 }
 
 #searchContainer {
-  display: block;
+  display: none;
   position: fixed;
   top: 70px;
   right: 20px;
@@ -137,26 +137,70 @@ li {
   padding: 10px;
   z-index: 999;
   min-width: 50%;
-  width:20em;
+  width:80%;
   text-align: center;
-  input[type="text"], textarea {
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  #searchTagCon, input[type="text"]:not(#searchTag), textarea {
     background-color: #f9f3f4;
     border: 2px solid $mainRed;
     border-radius: 5px;
-    font-size: 16px;
     width:90%;
     min-width:45%;
     margin: 5px 0px;
+  }
+  input[type="text"] {
+    font-size: 16px;
+    &:focus {
+      outline: none;
+    }
   }
   textarea {
     text-wrap: wrap;
     resize:none;
     field-sizing: content;
   }
-  #searchTag {
+  #searchTagCon {
     margin-bottom:0px;
+    display:block;
+    width: 90%;
+    text-align: left;
+    input[type="text"] {
+      font-size: 16px;
+      &:focus {
+        outline: none;
+      }
+    }
+    #searchTag {
+      border: none;
+      width: fit-content;
+      background-color: transparent;
+      padding: 5px 3px;
+      font-size: 16px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .tag {
+      display: inline-block;
+      background-color: $mainRed;
+      color: white;
+      border-radius: 3px;
+      padding: 2px 5px;
+      margin: 2px;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($mainRed, 10%);
+      }
+      &::after {
+        content: " X";
+        font-weight: bold;
+      }
+    }
   }
-  #searchTag:focus, #search:focus {
+  #searchTagCon:focus, #search:focus {
     outline: none;
     border: 3px solid $mainRed;
   }
@@ -169,6 +213,7 @@ li {
     border: 3px solid $mainRed;
     border-radius: 5px;
     display: none;
+    width:90%;
     button {
       background: none;
       color:black;
@@ -187,7 +232,7 @@ li {
 }
 
 .show {
-  display: block !important;
+  display: flex !important;
 }
 
 

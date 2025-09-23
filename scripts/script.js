@@ -15,36 +15,42 @@ for (i = 0; i < coll.length; i++) {
 
 const events = document.querySelectorAll('[data-tags]');
 
+let tags = [];
 function addTag(tag) {
   let input = document.getElementById("searchTag");
-  if (input.value) {
-    temp = input.value.split(',').map(tag => tag.trim().toLowerCase());
-    temp.pop();
-    if (!temp.includes(tag.toLowerCase()) && temp.length > 0) {
-      input.value = temp.join(', ') + ', ' + tag + ', ';
-    } else if (!temp.includes(tag.toLowerCase())) {
-      input.value = tag + ', ';
-    } else {
-      temp.splice(temp.indexOf(tag.toLowerCase()),1);
-      input.value = temp.join(', ');
-      if (temp.length > 0) {
-        input.value += ', ';
-      }
-    }
+  input.value = "";
+  if (tags.includes(tag)) {
+    tags = tags.filter(e => e !== tag);
   } else {
-    input.value = tag + ', ';
+    tags.push(tag);
+  }
+  let newtag = document.createElement("div");
+  document.getElementById("searchTagCon").appendChild(newtag);
+  newtag.innerText = tag;
+  newtag.classList.add("tag");
+  document.getElementById("searchTagCon").appendChild(input);
+
+  let tagElements = document.getElementsByClassName("tag");
+  for (let j = 0; j < tagElements.length; j++) {
+    tagElements[j].addEventListener("click", function(e) {
+      e.target.remove();
+      tags = tags.filter(t => t !== e.target.innerText);
+      tagSearch();
+      if (tags.length == 0) {
+        for (i = 0; i < events.length; i++) {
+          events[i].style.display = "list-item";
+        }
+      }
+    });
   }
 }
 
 function tagSearch() {
-  input = document.getElementById("searchTag");
-  filter = input.value;
-  
   for (i = 0; i < events.length; i++) {
     events[i].parentNode.style.display = "none";
     events[i].parentNode.previousElementSibling.classList.remove("active");
   }
-  let enabledTags = filter.split(',').map(tag => tag.trim().toLowerCase());
+  let enabledTags = tags;
   console.log(enabledTags);
   for (i = 0; i < events.length; i++) {
     let tags = events[i].getAttribute("data-tags");
@@ -120,11 +126,14 @@ document.getElementById("tagList").style.display = "block";
 document.getElementById("searchTag").addEventListener("blur", (e) => {
   document.addEventListener("mouseup", (e) => {
     setTimeout(function(){document.getElementById("tagList").style.display = "none";
-    if (document.getElementById("searchTag").value == "") {
+    if (tags.length == 0) {
       for (i = 0; i < events.length; i++) {
         events[i].style.display = "list-item";
       }
     }}, 20);
   }, { once: true });
   
+});
+document.getElementById("searchTagCon").addEventListener("click", (e) => {
+  document.getElementById("searchTag").focus();
 });

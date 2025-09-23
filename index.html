@@ -11,8 +11,9 @@
         <button id="searchMenuB" onclick="openMenu()"> </button>
         <div id="searchContainer">
         <input type="text" placeholder="Search..." id="search" onkeyup="wordSearch()">
-        <div id="tagSearchContainer">
-            <input type="text" placeholder="Tag Search" id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true); tagSearch();"></textarea>
+            <div id="searchTagCon">
+            <input type="text" placeholder="Tag Search" id="searchTag" onkeyup="wordSearch(document.getElementById('tagList').querySelectorAll('li'), true); tagSearch();">
+            </div>
             <ul id="tagList">
                 <li><button onclick="addTag('acroamatic abatement'); tagSearch();">acroamatic abatement</button></li>
                 <li><button onclick="addTag('allan mcinnis'); tagSearch();">allan mcinnis</button></li>
@@ -58,7 +59,6 @@
                 <li><button onclick="addTag('vivian scout'); tagSearch();">vivian scout</button></li>
                 <li><button onclick="addTag('wynn rydderech'); tagSearch();">wynn rydderech</button></li>
             </ul>
-        </div>
         </div>
         <ul>
         <li class="collapsible"><h1>1200s</h1></li>

@@ -150,7 +150,7 @@ li.active::before {
 }
 
 #searchContainer {
-  display: block;
+  display: none;
   position: fixed;
   top: 70px;
   right: 20px;
@@ -160,27 +160,72 @@ li.active::before {
   padding: 10px;
   z-index: 999;
   min-width: 50%;
-  width: 20em;
+  width: 80%;
   text-align: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-#searchContainer input[type=text], #searchContainer textarea {
+#searchContainer #searchTagCon, #searchContainer input[type=text]:not(#searchTag), #searchContainer textarea {
   background-color: #f9f3f4;
   border: 2px solid #BB0011;
   border-radius: 5px;
-  font-size: 16px;
   width: 90%;
   min-width: 45%;
   margin: 5px 0px;
+}
+#searchContainer input[type=text] {
+  font-size: 16px;
+}
+#searchContainer input[type=text]:focus {
+  outline: none;
 }
 #searchContainer textarea {
   text-wrap: wrap;
   resize: none;
   field-sizing: content;
 }
-#searchContainer #searchTag {
+#searchContainer #searchTagCon {
   margin-bottom: 0px;
+  display: block;
+  width: 90%;
+  text-align: left;
 }
-#searchContainer #searchTag:focus, #searchContainer #search:focus {
+#searchContainer #searchTagCon input[type=text] {
+  font-size: 16px;
+}
+#searchContainer #searchTagCon input[type=text]:focus {
+  outline: none;
+}
+#searchContainer #searchTagCon #searchTag {
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  padding: 5px 3px;
+  font-size: 16px;
+}
+#searchContainer #searchTagCon #searchTag:focus {
+  outline: none;
+}
+#searchContainer #searchTagCon .tag {
+  display: inline-block;
+  background-color: #BB0011;
+  color: white;
+  border-radius: 3px;
+  padding: 2px 5px;
+  margin: 2px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#searchContainer #searchTagCon .tag:hover {
+  background-color: rgb(136, 0, 12.3636363636);
+}
+#searchContainer #searchTagCon .tag::after {
+  content: " X";
+  font-weight: bold;
+}
+#searchContainer #searchTagCon:focus, #searchContainer #search:focus {
   outline: none;
   border: 3px solid #BB0011;
 }
@@ -193,6 +238,7 @@ li.active::before {
   border: 3px solid #BB0011;
   border-radius: 5px;
   display: none;
+  width: 90%;
 }
 #searchContainer #tagList button {
   background: none;
@@ -210,7 +256,7 @@ li.active::before {
 }
 
 .show {
-  display: block !important;
+  display: flex !important;
 }
 
 /*BETTER FOOTNOTES - CREDIT TO EstrellaYoshte, Woedenaz, and Placeholder McD*/
