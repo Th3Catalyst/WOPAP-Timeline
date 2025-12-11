@@ -1,2 +1,2 @@
-# OG43
+# WOPAP Timeline
 A comprehensive timeline of the events of Words of Power and Poison.
